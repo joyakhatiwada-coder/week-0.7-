@@ -1,0 +1,330 @@
+
+/* ========================================
+   GUCCI-INSPIRED LUXURY COLOR PALETTE
+   ======================================== */
+
+:root {
+    --green: #143D2B;
+    --red: #9E1B32;
+    --gold: #C6A15B;
+    --black: #111111;
+    --white: #FFFFFF;
+    --gray: #B8B8B8;
+}
+
+/* ========================================
+   BASIC STYLING
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    padding: 30px 20px;
+
+    background-color: var(--black);
+    color: var(--white);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Main page container */
+.page-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   STEP 1: NAVIGATION MENU ALIGNMENT
+   ======================================== */
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 16px;
+
+    background-color: var(--green);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+}
+
+.navigation a {
+    display: block;
+    padding: 8px 14px;
+
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navigation a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* ========================================
+   STEP 2: HORIZONTAL CARD LAYOUT
+   ======================================== */
+
+/* Parent container arranges both cards */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    width: 100%;
+}
+
+/* Both cards */
+.business-card {
+    flex: 1 1 400px;
+    min-width: 0;
+    max-width: 520px;
+    padding: 32px;
+
+    background-color: var(--green);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================================
+   PROFILE INFORMATION
+   ======================================== */
+
+.profile {
+    text-align: center;
+}
+
+.label {
+    margin-bottom: 14px;
+
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#profile-name {
+    margin-bottom: 8px;
+
+    color: var(--white);
+    font-size: 32px;
+    letter-spacing: 0.5px;
+}
+
+.card-heading {
+    margin-bottom: 12px;
+
+    color: var(--white);
+    font-size: 28px;
+}
+
+.card-info {
+    color: #E0E0E0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.location {
+    margin-top: 5px;
+
+    color: var(--gold);
+    font-size: 14px;
+}
+
+/* ========================================
+   STEP 3: FIX IMAGE OVERFLOW
+   ======================================== */
+
+.profile-image {
+    display: block;
+    margin: 20px auto 0;
+
+    /* Original fixed width retained as a comment */
+    /* width: 1000px; */
+
+    /* Responsive image sizing */
+    width: 50%;
+    max-width: 250%;
+    height: auto;
+
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+}
+
+/* ========================================
+   DIVIDER
+   ======================================== */
+
+hr {
+    margin: 28px 0;
+
+    border: none;
+    border-top: 1px solid var(--gold);
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
+.contact h2 {
+    margin-bottom: 16px;
+
+    color: var(--gold);
+    font-size: 21px;
+    font-weight: normal;
+}
+
+/* Contact form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 20px;
+
+    background-color: #102F22;
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+}
+
+/* First and last name fields */
+.name-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* Input fields */
+.contact-form input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid #527061;
+    border-radius: 4px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.contact-form input::placeholder {
+    color: var(--gray);
+}
+
+.contact-form input:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 1px;
+}
+
+/* Send button */
+.contact-form button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 4px;
+
+    background-color: var(--red);
+    color: var(--white);
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #7F1427;
+}
+
+/* ========================================
+   ABOUT ME CARD
+   ======================================== */
+
+.about-details h3 {
+    margin-bottom: 14px;
+
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.about-details ul {
+    padding-left: 22px;
+
+    color: #E0E0E0;
+    line-height: 2;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    margin-top: 24px;
+
+    text-align: center;
+    color: #D2C7B5;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* ========================================
+   RESPONSIVE LAYOUT
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    /* Stack cards vertically on mobile */
+    .content-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .business-card {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: none;
+        padding: 28px 22px;
+    }
+
+    #profile-name {
+        font-size: 27px;
+    }
+
+    /* Stack name fields vertically */
+    .name-fields {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Keep navigation centered */
+    .navigation {
+        justify-content: center;
+    }
+}
